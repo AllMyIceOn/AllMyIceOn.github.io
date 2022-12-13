@@ -90,6 +90,7 @@
 
 html {
   scroll-padding-top: 82px;
+   overflow-x: hidden;
 }
 
 body {
