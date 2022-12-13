@@ -1,0 +1,824 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-padding-top: 82px;
+
+}
+
+body {
+    position: relative;
+    font-family: 'montserrat', sans-serif;
+    background-color: $main-background;
+    color: $white;
+    overflow-x: hidden;
+}
+
+.shadow-bg {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+p {
+    color: $white;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.underline {
+    margin: 0 auto 40px;
+    width: 60px;
+    height: 4px;
+    background-color: $main-color;
+}
+
+.cyan-text {
+    color: $main-color;
+}
+
+.endLine {
+    height: 200px;
+    width: 100%;
+}
+
+hr {
+    width: 80%;
+    margin: 10%;
+    height: 3px;
+    background: #4ddef1;
+    border: 0px;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #4ddef1;
+    --bs-btn-border-color: #4ddef1;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #4ddef1;
+    --bs-btn-hover-border-color: #4ddef1;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #4ddef1;
+    --bs-btn-active-border-color: #4ddef1;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #4ddef1;
+    --bs-btn-disabled-border-color: #4ddef1;
+}
+
+.card {
+    background-color: #1f1f1f;
+}
+
+.year {
+    position: absolute;
+    top: 120%;
+    left: 49%;
+}
+
+nav {
+    text-transform: uppercase;
+    transition: background-color .6s;
+    z-index: 1;
+
+
+
+    .nav-link:hover,
+    .navbar-brand:hover {
+        color: $main-color;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+    }
+
+    .fa-bars {
+        color: $white;
+        padding: 10px;
+    }
+
+}
+
+
+
+.active {
+    color: #4ddef1;
+}
+
+header {
+
+    h1 {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+        color: #FFFFFF;
+        background: #33333300;
+        text-shadow: 0 -1px 4px #FFF, 0 -2px 10px rgb(17, 108, 145), 0 -10px 20px #00e1ff, 0 -18px 40px rgb(0, 217, 255);
+        font-weight: bold;
+    }
+
+    .hero-img {
+        position: relative;
+        height: 100vh;
+        background-image: url("/img/multi.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: 0;
+    }
+
+    .hero-shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: -10;
+    }
+
+    .hero-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding: 10px;
+        text-align: center;
+        z-index: 5;
+    }
+
+
+    .btn-light {
+        text-transform: uppercase;
+    }
+
+    .fa-chevron-down {
+        position: absolute;
+        left: 49%;
+        bottom: 10%;
+        font-size: 30px;
+        color: $white;
+    }
+}
+
+.toxic {
+    color: $white;
+
+    .cdCoverBack {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        background-color: rgb(4, 4, 4);
+    }
+
+    .cdCover {
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        background-image: url("/img/cd-cover.jpg");
+        background-size: cover;
+        background-position: center;
+        transform-origin: left;
+        transition: .6s;
+        animation: cover 10s 2s infinite;
+    }
+
+    .cdCircle {
+        border: solid 1px gray;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        height: 350px;
+        width: 350px;
+        background-image: url("/img/cd-cover.jpg");
+        background-size: 150%;
+        background-position: center;
+        transition: transform .3s;
+        border-radius: 50%;
+        animation: push 10s 2s infinite;
+    }
+
+    .holeCircle {
+        position: absolute;
+        margin: 155px 155px;
+        border: solid 3px gray;
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    .track {
+        height: 400px;
+        width: 400px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .trackBezSerca {
+        background-image: url(/img/bezserca.jpg);
+    }
+
+    .trackBallada {
+        background-image: url(/img/ballada.jpg);
+    }
+
+    .trackToxicLuv {
+        background-image: url(/img/bezserca.jpg);
+    }
+
+    .trackPrzekręt {
+        background-image: url(/img/przekret.jpg);
+    }
+
+    .track48100 {
+        background-image: url(/img/48100.jpg);
+    }
+
+    .trackoscar {
+        background-image: url(/img/oscar.jpg);
+    }
+
+    .trackMamJuzDosc {
+        background-image: url(/img/dosc.jpg);
+    }
+
+    .trackBeksa {
+        background-image: url(/img/beksa.jpg);
+    }
+
+    .trackBardzoBoli {
+        background-image: url(/img/boli.jpg);
+    }
+
+    .trackFanta {
+        background-image: url(/img/fanta.jpg);
+    }
+
+    .trackNigdyNieSpie {
+        background-image: url(/img/nigdy.jpg);
+    }
+
+    .trackZiomeczkiZiomy {
+        background-image: url(/img/ziomeczki.jpg);
+    }
+
+    .trackSen {
+        background-image: url(/img/sen.jpg);
+    }
+
+    .trackSol {
+        background-image: url(/img/sol.jpg);
+    }
+
+    .trackWolnosc {
+        background-image: url(/img/wolnosc.jpg);
+    }
+
+    .trackBlik {
+        background-image: url(/img/blik.jpg);
+    }
+
+    .trackTrill {
+        background-image: url(/img/trill.jpg);
+    }
+
+    .trackToast {
+        background-image: url(/img/toast.jpg);
+    }
+
+    .trackTitle {
+        position: absolute;
+        top: 85%;
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+
+}
+
+.trapAfterDeath {
+    color: $white;
+
+    .cdCoverBack {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        background-color: rgb(121, 121, 121);
+    }
+
+    .cdCover {
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        background-image: url("/img/trap-after-death.jpg");
+        background-size: cover;
+        background-position: center;
+        transform-origin: left;
+        transition: .6s;
+        animation: cover 10s 2s infinite;
+    }
+
+    .cdCircle {
+        border: solid 1px gray;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        height: 350px;
+        width: 350px;
+        background-image: url("/img/trap-after-death.jpg");
+        background-size: 150%;
+        background-position: center;
+        transition: transform .3s;
+        border-radius: 50%;
+        animation: push 10s 2s infinite;
+    }
+
+    .holeCircle {
+        position: absolute;
+        margin: 155px 155px;
+        border: solid 3px gray;
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    .track {
+        height: 400px;
+        width: 400px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .trackBezSerca {
+        background-image: url(/img/9zyc.jpg);
+    }
+
+    .trackBallada {
+        background-image: url(/img/skate3.jpg);
+    }
+
+    .trackToxicLuv {
+        background-image: url(/img/torba.jpg);
+    }
+
+    .trackPrzekręt {
+        background-image: url(/img/modelki.jpg);
+    }
+
+    .track48100 {
+        background-image: url(/img/trotyl.jpg);
+    }
+
+    .trackoscar {
+        background-image: url(/img/trapforteca.jpg);
+    }
+
+    .trackMamJuzDosc {
+        background-image: url(/img/fckfame.jpg);
+    }
+
+    .trackBeksa {
+        background-image: url(/img/fakefreestyle.jpg);
+    }
+
+    .trackBardzoBoli {
+        background-image: url(/img/drip.jpg);
+    }
+
+    .trackFanta {
+        background-image: url(/img/tsunami.jpg);
+    }
+
+    .trackNigdyNieSpie {
+        background-image: url(/img/10k.jpg);
+    }
+
+    .trackZiomeczkiZiomy {
+        background-image: url(/img/kafle.jpg);
+    }
+
+    .trackTitle {
+        position: absolute;
+        top: 85%;
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+}
+
+.trapstar {
+    color: $white;
+
+    .cdCoverBack {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        background-image: url("/img/trapstar.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cdCover {
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        background-image: url("/img/trapstar.jfif");
+        background-size: cover;
+        background-position: center;
+        transform-origin: left;
+        transition: .6s;
+        animation: cover 10s 2s infinite;
+    }
+
+    .cdCircle {
+        border: solid 1px gray;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        height: 350px;
+        width: 350px;
+        background-image: url("/img/trapstar.jfif");
+        background-size: 150%;
+        background-position: center;
+        transition: transform .3s;
+        border-radius: 50%;
+        animation: push 10s 2s infinite;
+    }
+
+    .holeCircle {
+        position: absolute;
+        margin: 155px 155px;
+        border: solid 3px gray;
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    .track {
+        height: 400px;
+        width: 400px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .trackBezSerca {
+        background-image: url(/img/jedendzien.jpg);
+    }
+
+    .trackBallada {
+        background-image: url(/img/plan.jpg);
+    }
+
+    .trackToxicLuv {
+        background-image: url(/img/skrzydla.jpg);
+    }
+
+    .trackPrzekręt {
+        background-image: url(/img/highlife.jpg);
+    }
+
+    .track48100 {
+        background-image: url(/img/kiedyodejde.jpg);
+    }
+
+    .trackoscar {
+        background-image: url(/img/nocrozliczenia.jpg);
+    }
+
+    .trackMamJuzDosc {
+        background-image: url(/img/corkatatusia.jpg);
+    }
+
+    .trackBeksa {
+        background-image: url(/img/blyskflesza.jpg);
+    }
+
+    .trackBardzoBoli {
+        background-image: url(/img/selfmade.jpg);
+    }
+
+    .trackFanta {
+        background-image: url(/img/ronaldinho.jpg);
+    }
+
+    .trackNigdyNieSpie {
+        background-image: url(/img/podzialy.jpg);
+    }
+
+
+    .trackTitle {
+        position: absolute;
+        top: 85%;
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+}
+
+.nowafala {
+    color: $white;
+
+    .cdCoverBack {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        background-image: url("/img/nowafala1.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cdCover {
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        background-image: url("/img/nowafala.jpg");
+        background-size: cover;
+        background-position: center;
+        transform-origin: left;
+        transition: .6s;
+        animation: cover 10s 2s infinite;
+    }
+
+    .cdCircle {
+        border: solid 1px gray;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        height: 350px;
+        width: 350px;
+        background-image: url("/img/nowafala.jpg");
+        background-size: 150%;
+        background-position: center;
+        transition: transform .3s;
+        border-radius: 50%;
+        animation: push 10s 2s infinite;
+    }
+
+    .holeCircle {
+        position: absolute;
+        margin: 155px 155px;
+        border: solid 3px gray;
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    .track {
+        height: 400px;
+        width: 400px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .trackBezSerca {
+        background-image: url(/img/nowysezon.jpg);
+    }
+
+    .trackBallada {
+        background-image: url(/img/diamenty.jpg);
+    }
+
+    .trackToxicLuv {
+        background-image: url(/img/plotki.jpg);
+    }
+
+    .trackPrzekręt {
+        background-image: url(/img/wiecej.jpg);
+    }
+
+    .track48100 {
+        background-image: url(/img/nowafalatrack.jpg);
+    }
+
+    .trackoscar {
+        background-image: url(/img/pytaszmnie.jpg);
+    }
+
+    .trackMamJuzDosc {
+        background-image: url(/img/dron.jpg);
+    }
+
+    .trackBeksa {
+        background-image: url(/img/beastmode.jpg);
+    }
+
+    .trackBardzoBoli {
+        background-image: url(/img/trap.jpg);
+    }
+
+    .trackFanta {
+        background-image: url(/img/kimtyjestes.jpg);
+    }
+
+    .trackNigdyNieSpie {
+        background-image: url(/img/pustaszklanka.jpg);
+    }
+
+    .trackZiomeczkiZiomy {
+        background-image: url(/img/plecak.jpg);
+    }
+
+    .trackSen {
+        background-image: url(/img/niewiem.jpg);
+    }
+
+    .trackSol {
+        background-image: url(/img/pogba.jpg);
+    }
+
+    .trackTitle {
+        position: absolute;
+        top: 85%;
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+
+}
+
+
+
+
+.contact {
+    position: relative;
+    background-image: url(../img/skyline-640.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+
+    .contact-shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(10, 0, 20, 0.8);
+        z-index: -2;
+    }
+
+    .underline {
+        background-color: $white;
+    }
+
+    i {
+        color: $white;
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    i:hover {
+        color: gray;
+    }
+}
+
+
+@media(min-width: 375px) {
+    header {
+        h1 {
+            font-size: 86px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+
+    nav {
+
+        font-size: 16px;
+
+        .navbar-brand {
+            font-size: 26px;
+        }
+    }
+
+    header {
+        h1 {
+            font-size: 106px;
+        }
+
+        p {
+            font-size: 28px;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    nav {
+        height: 82px;
+    }
+
+    .aboutus-hero {
+        background-image: url("/img/noc.jpg");
+    }
+
+    .prices {
+        .price-info {
+            font-size: 18px;
+        }
+    }
+
+    .team {
+        .hero-team {
+            background-image: url('/img/sala.jpg');
+        }
+    }
+
+    .contact {
+        background-image: url("../img/skyline.jpg");
+    }
+}
+
+@media (min-width: 1200px) {
+
+    header {
+        .hero-img {
+            background-image: url("/img/multi.jpg");
+        }
+    }
+
+}
+
+
+@keyframes cover {
+    0% {
+        transform: rotateY(0deg) skew(0deg);
+    }
+
+    5% {
+        transform: rotateY(30deg) skewY(10deg);
+    }
+
+    75% {
+        transform: rotateY(30deg) skewY(10deg);
+    }
+
+    80% {
+        transform: rotateY(0deg) skew(0deg);
+    }
+}
+
+@keyframes push {
+    5% {
+        transform: translate(0px);
+    }
+
+    10% {
+        transform: translate(220px, 0px);
+    }
+
+    70% {
+        transform: translate(220px, 0px);
+    }
+
+    75% {
+        transform: translate(0px);
+    }
+}
